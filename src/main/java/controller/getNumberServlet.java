@@ -32,7 +32,6 @@ public class getNumberServlet extends HttpServlet {
 		
 		NumberGuess userGame = new NumberGuess(Integer.parseInt(userGuess));
 		
-		userGame.resetCorrectNumber();
 		request.setAttribute("userGameGuess", userGame);
 		
 		getServletContext().getRequestDispatcher("/numberguessresult.jsp").forward(request, response);
